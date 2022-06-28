@@ -1,2 +1,2 @@
 # CPI
-streamlit link: https://share.streamlit.io/gwk01/cpi/main/CPI_dashboard.py
+streamlit link: https://gwk01-cpi-oman-cpi-dashboard-sgi90w.streamlitapp.com/
