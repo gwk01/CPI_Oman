@@ -444,7 +444,11 @@ submit=col4.button("Submit and Send")
 #st.write(type(missing_date_data))
 
 if submit:
-     
+    if (gen_cpi == '') or (food_cpi=='') or (alcohol_cpi=='')or (cloth_cpi=='')or (house_cpi=='')or (furnish_cpi=='')or (health_cpi=='')or (trans_cpi=='')or (comm_cpi=='')or (leis_cpi=='')or (edu_cpi=='')or (rest_cpi=='')or (mis_cpi==''):
+        st.markdown('<h3 style="text-align:center;color:#ff0000;font-family:Arial Black;font-size:48px;border-radius:0%;"> You have at least one missing index.</h3>', unsafe_allow_html=True)
+        st.markdown('<h3 style="text-align:center;color:#0d0d0c;font-family:Arial;font-size:30px;border-radius:0%;"> Your CPI data was not submitted. Please, review and submit again.</h3>', unsafe_allow_html=True)
+        st.markdown('<h3 style="text-align:center;color:#0d0d0c;font-family:Arial Black;font-size:40px;border-radius:0%;">Thank You!</h3>', unsafe_allow_html=True)
+    else:    
         st.markdown('<h3 style="text-align:center;color:#0d0d0c;font-family:Arial Black;font-size:35px;border-radius:0%;">Thank you! Your CPI data was sent.</h3>', unsafe_allow_html=True)
         try:
             portal[missing_date_data][(portal['Country']==country)&(portal['CPI groups']=='General CPI')]=float(gen_cpi)
